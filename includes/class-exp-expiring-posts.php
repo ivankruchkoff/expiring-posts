@@ -755,9 +755,9 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 			array(
 				/* translators: %s: expiry date. */
 				'expires_on'    => __( 'Expires on: %s', 'expiring-posts' ),
-				/* translators: %s: the word "never". */
+				/* translators: %s: the word "Never". */
 				'expires_never' => __( 'Expires: %s', 'expiring-posts' ),
-				'never'         => __( 'never', 'expiring-posts' ),
+				'never'         => __( 'Never', 'expiring-posts' ),
 				'expired_text'  => _x( 'Expired', 'post status', 'expiring-posts' ),
 				'save_text'     => __( 'Save Post', 'expiring-posts' ),
 				'date_format'   => $this->classic_date_format(),
@@ -776,7 +776,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 	 */
 	private function classic_date_format() {
 		/* translators: 1: month abbreviation, 2: day, 3: year, 4: hour, 5: minute. */
-		return __( '%1$s %2$s, %3$s @ %4$s:%5$s', 'expiring-posts' );
+		return __( '%1$s %2$s, %3$s at %4$s:%5$s', 'expiring-posts' );
 	}
 
 	/**
@@ -812,8 +812,8 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 			/* translators: %s: expiry date. */
 			$label = sprintf( esc_html__( 'Expires on: %s', 'expiring-posts' ), '<b>' . esc_html( $date ) . '</b>' );
 		} else {
-			/* translators: %s: the word "never". */
-			$label = sprintf( esc_html__( 'Expires: %s', 'expiring-posts' ), '<b>' . esc_html__( 'never', 'expiring-posts' ) . '</b>' );
+			/* translators: %s: the word "Never". */
+			$label = sprintf( esc_html__( 'Expires: %s', 'expiring-posts' ), '<b>' . esc_html__( 'Never', 'expiring-posts' ) . '</b>' );
 		}
 
 		// The "Expired" option is moved into the core status dropdown by JS.

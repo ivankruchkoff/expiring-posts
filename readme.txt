@@ -140,10 +140,12 @@ Yes. Return `true` from the `exp_disable_expiration_for_this_post` filter for th
 * Security: the classic editor only saves expiry for the post being edited, not for other posts saved in the same request.
 * Security: the date fields are validated as numbers before use.
 * Security: plugin files can't be loaded directly.
-* Fix: a fatal error on PHP 8 when post states were requested without a current post, which caused the "critical error" reported on the support forum. Props Luke Gedeon (#7).
+* Fix: a fatal error on PHP 8 (a warning on PHP 7) when post states were requested without a current post, which caused the "critical error" reported on the support forum. Props Luke Gedeon (#7, #8).
 * Fix: expiry times were stored or shown in UTC instead of the site timezone in several places, so posts could expire hours early or late.
 * Fix: re-publishing an expired post with a later expiry date now keeps it scheduled. Props Rinat Khaziev (#1).
 * Fix: the classic editor no longer shows a blank status on new posts. Props Philip John (#3).
+* Fix: switching a privately published post back to Public in the classic editor no longer leaves the status blank and saves it as private again (#2).
+* Changed: the classic editor expiry field now matches the publish date field: "at" instead of "@", "Never" capitalised, and the same input sizes, spacing and mobile layout (#9).
 * Fix: drafts and pending posts are no longer expired.
 * Fix: an invalid nonce no longer stops the whole post save with an error page; the expiry change is just skipped.
 * Fix: the scheduled event is cleaned up when the last expiring post is deleted, and when the plugin is deactivated.
