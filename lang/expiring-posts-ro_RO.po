@@ -1,0 +1,228 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n % 100 >= 2 && n % 100 <= 19) ? 1 : 2);\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Articole cu expirare"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Mută automat un articol în starea „Expirat” la data pe care o alegi. Funcționează cu editorul de blocuri și cu editorul clasic."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Expirat"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Expirat <span class=\"count\">(%s)</span>"
+msgstr[1] "Expirate <span class=\"count\">(%s)</span>"
+msgstr[2] "Expirate <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Acest articol nu poate fi expirat, data de expirare nu este validă."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Acesta nu este un articol valid."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Articolul furnizat nu este un articol valid."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Expiră pe: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Expiră: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Niciodată"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Salvează articolul"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s %1$s %3$s la %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "A expirat pe: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Editează"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Editează data și ora expirării"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Data și ora expirării"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Lună"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Zi"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "An"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Oră"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minut"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Nu expiră niciodată"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Anulează"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Setările de expirare ale articolului."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Dacă articolul expiră la data dată."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Data expirării în fusul orar al site-ului. Datele cu decalaj UTC sunt convertite."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Regret, nu ai permisiunea să modifici expirarea acestui articol."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Dată de expirare invalidă."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Este necesară o dată de expirare."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Articolul sau data de expirare furnizată nu este validă."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Articolul furnizat nu este valid."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Acest articol a expirat și este ascuns vizitatorilor. Publică-l din nou ca să-l restaurezi."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Expirat"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Acest articol a expirat. Publică-l din nou ca să fie vizibil."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Această dată a trecut. Articolul va expira la scurt timp după salvare."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "La această dată articolul trece în starea „Expirat” și este ascuns vizitatorilor."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Expiră"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Modifică expirarea: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Expirare"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Închide"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Setează expirarea articolului"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Expiră acum"

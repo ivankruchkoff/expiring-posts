@@ -1,0 +1,228 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Croatian\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Objave s istekom"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Automatski premješta objavu u status „Isteklo” na datum koji odaberete. Radi s uređivačem blokova i klasičnim uređivačem."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Isteklo"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Isteklo <span class=\"count\">(%s)</span>"
+msgstr[1] "Isteklo <span class=\"count\">(%s)</span>"
+msgstr[2] "Isteklo <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Ova objava ne može isteći, datum isteka nije valjan."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Ovo nije valjana objava."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Navedena objava nije valjana objava."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Istječe dana: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Istječe: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Nikad"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Spremi objavu"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s. %1$s %3$s. u %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Isteklo dana: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Uredi"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Uredi datum i vrijeme isteka"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Datum i vrijeme isteka"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Mjesec"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Dan"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "Godina"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Sat"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minuta"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Nikad ne istječe"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "U redu"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Odustani"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Postavke isteka objave."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Istječe li objava na navedeni datum."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Datum isteka u vremenskoj zoni web-stranice. Datumi s pomakom od UTC-a se pretvaraju."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Nažalost, nemate dopuštenje za promjenu isteka ove objave."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Neispravan datum isteka."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Datum isteka je obavezan."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Navedena objava ili datum isteka nisu valjani."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Navedena objava nije valjana."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Ova objava je istekla i skrivena je od posjetitelja. Ponovno je objavite kako biste je vratili."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Isteklo"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Ova objava je istekla. Ponovno je objavite kako bi bila vidljiva."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Ovaj datum je prošao. Objava će isteći ubrzo nakon spremanja."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "Na ovaj datum objava prelazi u status „Isteklo” i skriva se od posjetitelja."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Istječe"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Promijeni istek: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Istek"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Zatvori"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Postavi istek objave"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Označi kao isteklo"

@@ -1,0 +1,227 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Greek\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Άρθρα με λήξη"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Μεταφέρει αυτόματα ένα άρθρο στην κατάσταση «Έληξε» την ημερομηνία που επιλέγετε. Λειτουργεί με τον επεξεργαστή μπλοκ και τον κλασικό επεξεργαστή."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Έληξε"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Έληξε <span class=\"count\">(%s)</span>"
+msgstr[1] "Έληξε <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Αυτό το άρθρο δεν μπορεί να λήξει, η ημερομηνία λήξης δεν είναι έγκυρη."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Αυτό δεν είναι έγκυρο άρθρο."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Το άρθρο που δόθηκε δεν είναι έγκυρο άρθρο."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Λήγει στις: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Λήξη: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Ποτέ"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Αποθήκευση άρθρου"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s %1$s %3$s στις %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Έληξε στις: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Επεξεργασία ημερομηνίας και ώρας λήξης"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Ημερομηνία και ώρα λήξης"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Μήνας"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Ημέρα"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "Έτος"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Ώρα"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Λεπτό"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Χωρίς λήξη"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Ρυθμίσεις λήξης άρθρου."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Αν το άρθρο λήγει τη δεδομένη ημερομηνία."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Ημερομηνία λήξης στη ζώνη ώρας του ιστότοπου. Οι ημερομηνίες με απόκλιση από UTC μετατρέπονται."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Λυπούμαστε, δεν σας επιτρέπεται να αλλάξετε τη λήξη αυτού του άρθρου."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Μη έγκυρη ημερομηνία λήξης."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Απαιτείται ημερομηνία λήξης."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Το άρθρο ή η ημερομηνία λήξης που δόθηκε δεν είναι έγκυρα."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Το άρθρο που δόθηκε δεν είναι έγκυρο."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Αυτό το άρθρο έληξε και είναι κρυφό από τους επισκέπτες. Δημοσιεύστε το ξανά για να το επαναφέρετε."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Έληξε"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Αυτό το άρθρο έληξε. Δημοσιεύστε το ξανά για να γίνει ορατό."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Αυτή η ημερομηνία έχει περάσει. Το άρθρο θα λήξει λίγο μετά την αποθήκευση."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "Αυτή την ημερομηνία το άρθρο μεταφέρεται στην κατάσταση «Έληξε» και κρύβεται από τους επισκέπτες."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Λήξη"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Αλλαγή λήξης: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Λήξη"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Ορισμός λήξης άρθρου"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Λήξη τώρα"

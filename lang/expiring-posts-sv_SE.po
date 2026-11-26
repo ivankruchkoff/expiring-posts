@@ -1,0 +1,227 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Swedish\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Utgående inlägg"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Flyttar automatiskt ett inlägg till statusen ”Utgånget” på ett datum du väljer. Fungerar med blockredigeraren och den klassiska redigeraren."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Utgånget"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Utgånget <span class=\"count\">(%s)</span>"
+msgstr[1] "Utgångna <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Detta inlägg kan inte gå ut, utgångsdatumet är ogiltigt."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Detta är inte ett giltigt inlägg."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Det angivna inlägget är inte ett giltigt inlägg."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Går ut den: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Går ut: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Aldrig"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Spara inlägg"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s %1$s %3$s kl. %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Gick ut den: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Redigera"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Redigera utgångsdatum och tid"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Utgångsdatum och tid"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Månad"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Dag"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "År"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Timme"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minut"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Gå aldrig ut"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Inställningar för inläggets utgång."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Om inlägget går ut på det angivna datumet."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Utgångsdatum i webbplatsens tidszon. Datum med UTC-förskjutning konverteras."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Du har tyvärr inte behörighet att ändra utgångsdatumet för detta inlägg."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Ogiltigt utgångsdatum."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Ett utgångsdatum krävs."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Inlägget eller det angivna utgångsdatumet är ogiltigt."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Det angivna inlägget är ogiltigt."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Detta inlägg har gått ut och är dolt för besökare. Publicera det igen för att återställa det."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Utgånget"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Detta inlägg har gått ut. Publicera det igen för att göra det synligt."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Detta datum har passerat. Inlägget går ut kort efter att du sparat."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "På detta datum flyttas inlägget till statusen ”Utgånget” och döljs för besökare."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Går ut"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Ändra utgång: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Utgång"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Stäng"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Låt inlägget gå ut"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Låt gå ut nu"

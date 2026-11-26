@@ -1,0 +1,227 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Ablaufende Beiträge"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Verschiebt einen Beitrag an einem von dir gewählten Datum automatisch in den Status „Abgelaufen“. Funktioniert mit dem Block-Editor und dem klassischen Editor."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Abgelaufen"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Abgelaufen <span class=\"count\">(%s)</span>"
+msgstr[1] "Abgelaufen <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Dieser Beitrag kann nicht ablaufen, das Ablaufdatum ist ungültig."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Dies ist kein gültiger Beitrag."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Der angegebene Beitrag ist kein gültiger Beitrag."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Läuft ab am: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Läuft ab: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Nie"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Beitrag speichern"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s. %1$s %3$s um %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Abgelaufen am: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Ablaufdatum und -uhrzeit bearbeiten"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Ablaufdatum und -uhrzeit"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Monat"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Tag"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "Jahr"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Stunde"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minute"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Nie ablaufen"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Ablaufeinstellungen des Beitrags."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Ob der Beitrag am angegebenen Datum abläuft."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Ablaufdatum in der Zeitzone der Website. Datumsangaben mit UTC-Versatz werden umgerechnet."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Du darfst das Ablaufdatum dieses Beitrags leider nicht ändern."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Ungültiges Ablaufdatum."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Ein Ablaufdatum ist erforderlich."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Entweder der Beitrag oder das angegebene Ablaufdatum ist ungültig."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Der angegebene Beitrag ist ungültig."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Dieser Beitrag ist abgelaufen und für Besucher nicht sichtbar. Veröffentliche ihn erneut, um ihn wiederherzustellen."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Abgelaufen"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Dieser Beitrag ist abgelaufen. Veröffentliche ihn erneut, um ihn sichtbar zu machen."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Dieses Datum liegt in der Vergangenheit. Der Beitrag läuft kurz nach dem Speichern ab."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "An diesem Datum wechselt der Beitrag in den Status „Abgelaufen“ und ist für Besucher nicht mehr sichtbar."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Läuft ab"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Ablaufdatum ändern: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Ablauf"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Schließen"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Diesen Beitrag ablaufen lassen"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Jetzt ablaufen lassen"

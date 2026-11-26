@@ -133,7 +133,7 @@ Yes. Return `true` from the `exp_disable_expiration_for_this_post` filter for th
 * New: `[expiring_posts_date]` shortcode and `exp_get_expiration_date()`, `exp_the_expiration_date()` and `exp_get_expiration_timestamp()` template functions for showing the expiry date.
 * New: `exp_supported_post_types`, `exp_expirable_post_statuses`, `exp_user_can_manage_expiration`, `exp_expire_batch_size` and `exp_get_expiring_posts` filters, and the `exp_post_expired` action.
 * New: editors can preview expired posts.
-* New: the plugin is translatable (text domain `expiring-posts`).
+* New: the plugin is translatable (text domain `expiring-posts`) and ships translations for 32 languages: Arabic, Bulgarian, Chinese (Simplified and Traditional), Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese (Brazil), Romanian, Russian, Serbian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian and Vietnamese. Language packs from translate.wordpress.org take priority when installed.
 * Security: expiry dates are escaped in the post list. Previously a crafted value in the expiry field could run a script in the browser of anyone viewing the list.
 * Security: the expiry meta fields are protected and validated, so they can no longer be edited through the Custom Fields box or XML-RPC.
 * Security: only users who can publish a post can change its expiry. Previously anyone who could edit it could.

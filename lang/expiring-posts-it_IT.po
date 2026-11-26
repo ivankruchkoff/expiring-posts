@@ -1,0 +1,227 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Articoli con scadenza"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Sposta automaticamente un articolo nello stato \"Scaduto\" nella data che scegli. Funziona con l’editor a blocchi e con l’editor classico."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Scaduto"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Scaduto <span class=\"count\">(%s)</span>"
+msgstr[1] "Scaduti <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Questo articolo non può scadere, la data di scadenza non è valida."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Questo non è un articolo valido."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "L’articolo fornito non è un articolo valido."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Scade il: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Scade: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Mai"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Salva articolo"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s %1$s %3$s alle %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Scaduto il: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Modifica"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Modifica data e ora di scadenza"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Data e ora di scadenza"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Mese"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Giorno"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "Anno"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Ora"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minuto"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Nessuna scadenza"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Annulla"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Impostazioni di scadenza dell’articolo."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Indica se l’articolo scade alla data indicata."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Data di scadenza nel fuso orario del sito. Le date con uno scostamento UTC vengono convertite."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Non hai i permessi per modificare la scadenza di questo articolo."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Data di scadenza non valida."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "È necessaria una data di scadenza."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "L’articolo o la data di scadenza forniti non sono validi."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "L’articolo fornito non è valido."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Questo articolo è scaduto ed è nascosto ai visitatori. Pubblicalo di nuovo per ripristinarlo."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Scaduto"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Questo articolo è scaduto. Pubblicalo di nuovo per renderlo visibile."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Questa data è già passata. L’articolo scadrà poco dopo il salvataggio."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "In questa data l’articolo passa allo stato \"Scaduto\" e viene nascosto ai visitatori."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Scade"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Modifica scadenza: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Scadenza"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Chiudi"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Fai scadere questo articolo"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Fai scadere ora"

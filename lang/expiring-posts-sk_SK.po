@@ -1,0 +1,228 @@
+# Copyright (C) 2026 Ivan Kruchkoff
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Expiring Posts 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/expiring-posts\n"
+"POT-Creation-Date: 2026-11-26T17:30:31+00:00\n"
+"PO-Revision-Date: 2026-11-26T17:30:31+00:00\n"
+"Last-Translator: Ivan Kruchkoff\n"
+"Language-Team: Slovak\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Domain: expiring-posts\n"
+"X-Generator: Expiring Posts build.py\n"
+
+#. Plugin Name of the plugin
+#: expiring-posts.php
+msgid "Expiring Posts"
+msgstr "Príspevky s obmedzenou platnosťou"
+
+#. Plugin URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff/expiring-posts"
+msgstr ""
+
+#. Description of the plugin
+#: expiring-posts.php
+msgid "Automatically move a post to an \"Expired\" status on a date you choose. Works with the block editor and the classic editor."
+msgstr "Automaticky presunie príspevok do stavu „Platnosť vypršala“ v deň, ktorý si zvolíte. Funguje s blokovým aj klasickým editorom."
+
+#. Author of the plugin
+#: expiring-posts.php
+msgid "Ivan Kruchkoff"
+msgstr ""
+
+#. Author URI of the plugin
+#: expiring-posts.php
+msgid "https://github.com/ivankruchkoff"
+msgstr ""
+
+#: includes/class-exp-expiring-posts.php:143 includes/class-exp-expiring-posts.php:770 includes/class-exp-expiring-posts.php:830 includes/class-exp-expiring-posts.php:1177
+msgctxt "post status"
+msgid "Expired"
+msgstr "Platnosť vypršala"
+
+#. translators: %s: number of expired posts.
+#: includes/class-exp-expiring-posts.php:152
+#, php-format
+msgid "Expired <span class=\"count\">(%s)</span>"
+msgid_plural "Expired <span class=\"count\">(%s)</span>"
+msgstr[0] "Platnosť vypršala <span class=\"count\">(%s)</span>"
+msgstr[1] "Platnosť vypršala <span class=\"count\">(%s)</span>"
+msgstr[2] "Platnosť vypršala <span class=\"count\">(%s)</span>"
+
+#: includes/class-exp-expiring-posts.php:439
+msgid "This post cannot be expired, the expiration date is invalid."
+msgstr "Platnosť tohto príspevku nie je možné ukončiť, dátum vypršania je neplatný."
+
+#: includes/class-exp-expiring-posts.php:574
+msgid "This is not a valid post."
+msgstr "Toto nie je platný príspevok."
+
+#: includes/class-exp-expiring-posts.php:589
+msgid "The post provided is not a valid post."
+msgstr "Zadaný príspevok nie je platný príspevok."
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:766 includes/class-exp-expiring-posts.php:822
+#, php-format
+msgid "Expires on: %s"
+msgstr "Platnosť vyprší: %s"
+
+#. translators: %s: expiry date, or the word "Never".
+#: includes/class-exp-expiring-posts.php:768 includes/class-exp-expiring-posts.php:825 includes/class-exp-expiring-posts.php:1186
+#, php-format
+msgid "Expires: %s"
+msgstr "Vyprší: %s"
+
+#: includes/class-exp-expiring-posts.php:769 includes/class-exp-expiring-posts.php:825 inc/js/block-editor.js:136
+msgid "Never"
+msgstr "Nikdy"
+
+#: includes/class-exp-expiring-posts.php:771
+msgid "Save Post"
+msgstr "Uložiť príspevok"
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute.
+#: includes/class-exp-expiring-posts.php:788 includes/class-exp-expiring-posts.php:899
+#, php-format
+msgid "%1$s %2$s, %3$s at %4$s:%5$s"
+msgstr "%2$s. %1$s %3$s o %4$s:%5$s"
+
+#. translators: %s: expiry date.
+#: includes/class-exp-expiring-posts.php:819
+#, php-format
+msgid "Expired on: %s"
+msgstr "Platnosť vypršala: %s"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit"
+msgstr "Upraviť"
+
+#: includes/class-exp-expiring-posts.php:833
+msgid "Edit expiry date and time"
+msgstr "Upraviť dátum a čas vypršania"
+
+#: includes/class-exp-expiring-posts.php:835
+msgid "Expiry date and time"
+msgstr "Dátum a čas vypršania"
+
+#: includes/class-exp-expiring-posts.php:867
+msgid "Month"
+msgstr "Mesiac"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation.
+#: includes/class-exp-expiring-posts.php:876
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: includes/class-exp-expiring-posts.php:891
+msgid "Day"
+msgstr "Deň"
+
+#: includes/class-exp-expiring-posts.php:892
+msgid "Year"
+msgstr "Rok"
+
+#: includes/class-exp-expiring-posts.php:893
+msgid "Hour"
+msgstr "Hodina"
+
+#: includes/class-exp-expiring-posts.php:894
+msgid "Minute"
+msgstr "Minúta"
+
+#: includes/class-exp-expiring-posts.php:914
+msgid "Never expire"
+msgstr "Bez obmedzenia platnosti"
+
+#: includes/class-exp-expiring-posts.php:917
+msgid "OK"
+msgstr "OK"
+
+#: includes/class-exp-expiring-posts.php:918
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: includes/class-exp-expiring-posts.php:1017
+msgid "Post expiry settings."
+msgstr "Nastavenia platnosti príspevku."
+
+#: includes/class-exp-expiring-posts.php:1022
+msgid "Whether the post expires on the given date."
+msgstr "Či platnosť príspevku vyprší v zadaný deň."
+
+#: includes/class-exp-expiring-posts.php:1026
+msgid "Expiry date in the site timezone. Dates with a UTC offset are converted."
+msgstr "Dátum vypršania v časovom pásme webu. Dátumy s posunom od UTC sa prevedú."
+
+#: includes/class-exp-expiring-posts.php:1071
+msgid "Sorry, you are not allowed to change the expiry of this post."
+msgstr "Ľutujeme, nemáte oprávnenie meniť platnosť tohto príspevku."
+
+#: includes/class-exp-expiring-posts.php:1081
+msgid "Invalid expiry date."
+msgstr "Neplatný dátum vypršania."
+
+#: includes/class-exp-expiring-posts.php:1092
+msgid "An expiry date is required."
+msgstr "Dátum vypršania je povinný."
+
+#: includes/functions.php:28
+msgid "Either the post or expiration date provided are not valid."
+msgstr "Zadaný príspevok alebo dátum vypršania nie je platný."
+
+#: includes/functions.php:61
+msgid "The post provided is not valid."
+msgstr "Zadaný príspevok nie je platný."
+
+#: inc/js/block-editor.js:97
+msgid "This post has expired and is hidden from visitors. Publish it again to restore it."
+msgstr "Platnosť tohto príspevku vypršala a návštevníci ho nevidia. Ak ho chcete obnoviť, znova ho publikujte."
+
+#: inc/js/block-editor.js:132 inc/js/block-editor.js:154
+msgid "Expired"
+msgstr "Platnosť vypršala"
+
+#: inc/js/block-editor.js:141
+msgid "This post has expired. Publish it again to make it visible."
+msgstr "Platnosť tohto príspevku vypršala. Ak má byť znova viditeľný, publikujte ho znova."
+
+#: inc/js/block-editor.js:143
+msgid "This date has passed. The post will expire shortly after you save."
+msgstr "Tento dátum už uplynul. Platnosť príspevku vyprší krátko po uložení."
+
+#: inc/js/block-editor.js:145
+msgid "On this date the post moves to the Expired status and is hidden from visitors."
+msgstr "V tento deň sa príspevok presunie do stavu „Platnosť vypršala“ a návštevníci ho prestanú vidieť."
+
+#: inc/js/block-editor.js:154
+msgid "Expires"
+msgstr "Vyprší"
+
+#. translators: %s: current expiry date, or "Never".
+#: inc/js/block-editor.js:173
+#, php-format
+msgid "Change expiry: %s"
+msgstr "Zmeniť platnosť: %s"
+
+#: inc/js/block-editor.js:185
+msgid "Expiry"
+msgstr "Platnosť"
+
+#: inc/js/block-editor.js:190
+msgid "Close"
+msgstr "Zavrieť"
+
+#: inc/js/block-editor.js:196
+msgid "Expire this post"
+msgstr "Obmedziť platnosť príspevku"
+
+#: inc/js/block-editor.js:223
+msgid "Expire now"
+msgstr "Ukončiť platnosť teraz"

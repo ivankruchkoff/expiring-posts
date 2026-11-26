@@ -75,6 +75,8 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 	 * Register hooks.
 	 */
 	private function __construct() {
+		add_action( 'init', array( $this, 'load_textdomain' ), 0 );
+		add_filter( 'load_script_translation_file', array( $this, 'bundled_script_translation' ), 10, 3 );
 		add_action( 'init', array( $this, 'expiring_post_status' ) );
 		add_action( 'init', array( $this, 'register_meta' ) );
 		add_action( 'init', array( $this, 'maybe_repair_schedule' ), 20 );
@@ -124,6 +126,36 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 	 */
 	public static function deactivate() {
 		wp_clear_scheduled_hook( self::CRON_HOOK );
+	}
+
+	/**
+	 * Use the translations bundled in /lang when there is no language pack
+	 * from translate.wordpress.org. Language packs always take priority.
+	 */
+	public function load_textdomain() {
+		load_plugin_textdomain( 'expiring-posts', false, dirname( plugin_basename( EXPIRING_POSTS_FILE ) ) . '/lang' );
+	}
+
+	/**
+	 * Fall back to the block editor translations bundled in /lang.
+	 *
+	 * WordPress calls this filter with `false` only after every lookup failed (no
+	 * language pack installed, or WordPress before 7.1, which doesn't look in the
+	 * plugin's Domain Path for script translations), so language packs still win.
+	 *
+	 * @param string|false $file   Translation file WordPress is about to load.
+	 * @param string       $handle Script handle.
+	 * @param string       $domain Text domain.
+	 * @return string|false
+	 */
+	public function bundled_script_translation( $file, $handle, $domain ) {
+		if ( false !== $file || 'expiring-posts' !== $domain || 'expiring-posts-block-editor' !== $handle ) {
+			return $file;
+		}
+
+		$bundled = EXPIRING_POSTS_DIR . 'lang/expiring-posts-' . determine_locale() . '-' . md5( 'inc/js/block-editor.js' ) . '.json';
+
+		return is_readable( $bundled ) ? $bundled : $file;
 	}
 
 	/**
@@ -755,7 +787,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 			array(
 				/* translators: %s: expiry date. */
 				'expires_on'    => __( 'Expires on: %s', 'expiring-posts' ),
-				/* translators: %s: the word "Never". */
+				/* translators: %s: expiry date, or the word "Never". */
 				'expires_never' => __( 'Expires: %s', 'expiring-posts' ),
 				'never'         => __( 'Never', 'expiring-posts' ),
 				'expired_text'  => _x( 'Expired', 'post status', 'expiring-posts' ),
@@ -775,7 +807,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 	 * @return string
 	 */
 	private function classic_date_format() {
-		/* translators: 1: month abbreviation, 2: day, 3: year, 4: hour, 5: minute. */
+		/* translators: 1: month, 2: day, 3: year, 4: hour, 5: minute. */
 		return __( '%1$s %2$s, %3$s at %4$s:%5$s', 'expiring-posts' );
 	}
 
@@ -812,7 +844,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 			/* translators: %s: expiry date. */
 			$label = sprintf( esc_html__( 'Expires on: %s', 'expiring-posts' ), '<b>' . esc_html( $date ) . '</b>' );
 		} else {
-			/* translators: %s: the word "Never". */
+			/* translators: %s: expiry date, or the word "Never". */
 			$label = sprintf( esc_html__( 'Expires: %s', 'expiring-posts' ), '<b>' . esc_html__( 'Never', 'expiring-posts' ) . '</b>' );
 		}
 
@@ -886,7 +918,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 
 		echo '<div class="exp-timestamp-wrap">';
 		printf(
-			/* translators: 1: month input, 2: day input, 3: year input, 4: hour input, 5: minute input. */
+			/* translators: 1: month, 2: day, 3: year, 4: hour, 5: minute. */
 			esc_html__( '%1$s %2$s, %3$s at %4$s:%5$s', 'expiring-posts' ),
 			$month, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped when built.
 			$day, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -1173,7 +1205,7 @@ class EXP_Expiring_Posts { // phpcs:ignore WordPress.NamingConventions.PrefixAll
 		$expiration = $this->get_expiration( $post );
 		if ( $expiration['enabled'] && $expiration['timestamp'] ) {
 			$format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
-			/* translators: %s: expiry date. */
+			/* translators: %s: expiry date, or the word "Never". */
 			$states['expires'] = esc_html( sprintf( __( 'Expires: %s', 'expiring-posts' ), wp_date( $format, $expiration['timestamp'] ) ) );
 		}
 
