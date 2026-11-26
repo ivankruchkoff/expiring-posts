@@ -39,7 +39,7 @@ Only users who can publish a post can change its expiry.
 
 = Developer notes =
 
-Development happens on GitHub: https://github.com/ivankruchkoff/wp-expiring-posts
+Development happens on GitHub: https://github.com/ivankruchkoff/expiring-posts
 
 * The post status is `expired`.
 * Expiry is stored in post meta: `exp_expiration_date` (site timezone, `Y-m-d H:i:s`) and `exp_pending_expiration` (`1` when expiry is on). Both keys are protected, so they don't show in the Custom Fields box.

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Expiring Posts
- * Plugin URI:        https://github.com/ivankruchkoff/wp-expiring-posts
+ * Plugin URI:        https://github.com/ivankruchkoff/expiring-posts
  * Description:       Automatically move a post to an "Expired" status on a date you choose. Works with the block editor and the classic editor.
  * Version:           2.0.0
  * Requires at least: 6.6
