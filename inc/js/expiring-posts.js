@@ -1,102 +1,155 @@
-jQuery(document).ready( function($) {
+/**
+ * Expiring Posts: classic editor controls in the Publish box.
+ *
+ * AdminExpiringPosts is provided by wp_localize_script().
+ */
+/* global AdminExpiringPosts, jQuery */
+( function ( $ ) {
+	'use strict';
 
-	// AdminExpiringPosts is a localized variable
-
-	// exp-timestamp is not on this page, don't run script
-	if ( ! document.getElementById( 'exp-timestamp' ) )
-		return;
-
-	var $postStatus = $( document.getElementById( 'post_status' )),
-		saveButton = document.getElementById('save-post'),
-		originalStatus = $postStatus.val();
-
-	// JS hack to append Expired to the post status editor
-	$postStatus.append( $( document.getElementById( 'expired-status' ) ) );
-	// reset post_status value after appending expired option
-	$postStatus.val( originalStatus );
-
-	// Set button text to "Update" instead of "Publish" when post is expired
-	if ( 'expired' == AdminExpiringPosts.post_status ){
-		document.getElementById('post-status-display').innerHTML = AdminExpiringPosts.expired_text;
-		saveButton.value = AdminExpiringPosts.save_text;
-		$( saveButton ).on('click', function(){
-			setTimeout( function(){
-				saveButton.value= AdminExpiringPosts.save_text;
-			}, 10 );
-		});
-	}
-
-
-	var $timestamp = $( document.getElementById( 'exp-timestamp' ) ),
-	    $timestampDiv = $( document.getElementById( 'exp-timestampdiv' ) ),
-	    $editTimestamp = $( document.querySelector( '.exp-edit-timestamp' ) ),
-	    $expEnable = $(document.getElementById( 'exp-enable' ) ),
-	    expEnableValue = ( $expEnable.attr('checked') ) ? $expEnable.attr('checked') : false,
-	    $expMM = $(document.getElementById( 'exp-mm' ) ),
-	    $expJJ = $(document.getElementById( 'exp-jj' ) ),
-	    $expAA = $(document.getElementById( 'exp-aa' ) ),
-	    $expHH = $(document.getElementById( 'exp-hh' ) ),
-	    $expMN = $(document.getElementById( 'exp-mn' ) );
-
-	// Cancel Button
-	$( document.querySelector( '.exp-cancel-timestamp' ) ).on( 'click', expCancelTimestamp );
-
-	// Save Button
-	$( document.querySelector( '.exp-save-timestamp' ) ).on( 'click', expSaveTimestamp );
-
-	// show / hide time adjustor and Edit button
-	$editTimestamp.on( 'click', editTimestampClick );
-
-	function expCancelTimestamp() {
-		$timestampDiv.slideUp("normal");
-		$expMM.val($( document.getElementById( 'hidden_exp-mm' ) ).val());
-		$expJJ.val($( document.getElementById( 'hidden_exp-jj' ) ).val());
-		$expAA.val($( document.getElementById( 'hidden_exp-aa' ) ).val());
-		$expHH.val($( document.getElementById( 'hidden_exp-hh' ) ).val());
-		$expMN.val($( document.getElementById( 'hidden_exp-mn' ) ).val());
-		$expEnable.attr( 'checked', expEnableValue );
-		$editTimestamp.show();
-		return false;
-	}
-
-	function expSaveTimestamp() { // crazyhorse - multiple ok cancels
-		var aa = $expAA.val(), mm = $expMM.val(), jj = $expJJ.val(), hh = $expHH.val(), mn = $expMN.val(),
-		    newD = new Date( aa, mm - 1, jj, hh, mn );
-
-		if ( ! ( expEnableValue = $expEnable.attr('checked') ) )
-			expEnableValue = false;
-
-		if ( newD.getFullYear() != aa || (1 + newD.getMonth()) != mm || newD.getDate() != jj || newD.getMinutes() != mn ) {
-			$('.exp-timestamp-wrap', '#exp-timestampdiv').addClass('form-invalid');
-			return false;
-		} else {
-			$('.exp-timestamp-wrap', '#exp-timestampdiv').removeClass('form-invalid');
+	$( function () {
+		var timestamp = document.getElementById( 'exp-timestamp' );
+		if ( ! timestamp || ! window.AdminExpiringPosts ) {
+			return;
 		}
 
-		$timestampDiv.slideUp("normal");
-		$editTimestamp.show();
+		var cfg = window.AdminExpiringPosts;
+		var $postStatus = $( '#post_status' );
+		var $expiredOption = $( '#expired-status' );
+		var saveButton = document.getElementById( 'save-post' );
+		var originalStatus = $postStatus.val();
 
-		if ( expEnableValue ) {
-			$timestamp.html( AdminExpiringPosts.expires_never );
-		} else {
-			$timestamp.html(
-					AdminExpiringPosts.expires_on + ' <b>' +
-							$( '#exp-mm option[value="' + mm + '"]' ).text() + ' ' +
-							jj + ', ' +
-							aa + ' @ ' +
-							hh + ':' +
-							mn + '</b> '
-			);
+		// Add "Expired" to the core status dropdown.
+		if ( $postStatus.length && $expiredOption.length && ! $postStatus.find( 'option[value="expired"]' ).length ) {
+			$postStatus.append( $expiredOption );
 		}
-		return false;
-	}
 
-	function editTimestampClick() {
-		if ($timestampDiv.is(":hidden")) {
-			$timestampDiv.slideDown("normal");
-			$editTimestamp.hide();
+		// Keep the current selection. An expired post has no matching core option,
+		// and a new post (auto-draft) must not end up with a blank status.
+		if ( 'expired' === cfg.post_status ) {
+			$postStatus.val( 'expired' );
+		} else if ( originalStatus ) {
+			$postStatus.val( originalStatus );
 		}
-		return false;
-	}
 
-});
+		if ( 'expired' === cfg.post_status ) {
+			$( '#post-status-display' ).text( cfg.expired_text );
+			if ( saveButton ) {
+				saveButton.value = cfg.save_text;
+				// Core's post.js rewrites the label after status changes.
+				$( '#post_status, .save-post-status, .cancel-post-status' ).on( 'change click', function () {
+					window.setTimeout( function () {
+						if ( 'expired' === $postStatus.val() ) {
+							saveButton.value = cfg.save_text;
+						}
+					}, 10 );
+				} );
+			}
+		}
+
+		var $timestamp = $( timestamp );
+		var $timestampDiv = $( '#exp-timestampdiv' );
+		var $edit = $( '.exp-edit-timestamp' );
+		var $never = $( '#exp-never' );
+		var neverSaved = $never.prop( 'checked' );
+		var units = [ 'mm', 'jj', 'aa', 'hh', 'mn' ];
+
+		function field( unit ) {
+			return $( '#exp-' + unit );
+		}
+
+		function pad( value ) {
+			value = String( parseInt( value, 10 ) );
+			return value.length < 2 ? '0' + value : value;
+		}
+
+		function format( template, values ) {
+			return template.replace( /%(\d)\$s/g, function ( match, index ) {
+				var value = values[ parseInt( index, 10 ) - 1 ];
+				return undefined === value ? match : value;
+			} );
+		}
+
+		function setLabel( template, boldText ) {
+			var parts = template.split( '%s' );
+			$timestamp.empty();
+			$timestamp.append( document.createTextNode( parts[ 0 ] || '' ) );
+			$timestamp.append( $( '<b />' ).text( boldText ) );
+			$timestamp.append( document.createTextNode( parts.slice( 1 ).join( '%s' ) ) );
+		}
+
+		function toggleFields() {
+			$( '.exp-timestamp-wrap', $timestampDiv ).toggleClass( 'exp-disabled', $never.prop( 'checked' ) );
+		}
+
+		function close() {
+			$timestampDiv.stop( true, true ).slideUp( 'fast' );
+			$edit.show().trigger( 'focus' );
+		}
+
+		$edit.on( 'click', function ( event ) {
+			event.preventDefault();
+			// Finish any running slide so a quick Cancel → Edit still opens the form.
+			$timestampDiv.stop( true, true );
+			if ( $timestampDiv.is( ':hidden' ) ) {
+				$timestampDiv.slideDown( 'fast', function () {
+					( $never.prop( 'checked' ) ? $never : field( 'mm' ) ).trigger( 'focus' );
+				} );
+				$edit.hide();
+			}
+		} );
+
+		$never.on( 'change', toggleFields );
+		toggleFields();
+
+		$( '.exp-cancel-timestamp' ).on( 'click', function ( event ) {
+			event.preventDefault();
+			units.forEach( function ( unit ) {
+				field( unit ).val( $( '#hidden_exp-' + unit ).val() );
+			} );
+			$never.prop( 'checked', neverSaved );
+			toggleFields();
+			$( '.exp-timestamp-wrap', $timestampDiv ).removeClass( 'form-invalid' );
+			close();
+		} );
+
+		$( '.exp-save-timestamp' ).on( 'click', function ( event ) {
+			event.preventDefault();
+
+			var aa = field( 'aa' ).val(),
+				mm = field( 'mm' ).val(),
+				jj = field( 'jj' ).val(),
+				hh = field( 'hh' ).val(),
+				mn = field( 'mn' ).val(),
+				date = new Date( aa, mm - 1, jj, hh, mn ),
+				$wrap = $( '.exp-timestamp-wrap', $timestampDiv );
+
+			neverSaved = $never.prop( 'checked' );
+
+			if ( ! neverSaved ) {
+				var valid = /^\d{4}$/.test( aa ) && /^\d{1,2}$/.test( jj ) && /^\d{1,2}$/.test( hh ) && /^\d{1,2}$/.test( mn ) &&
+					date.getFullYear() === parseInt( aa, 10 ) &&
+					date.getMonth() + 1 === parseInt( mm, 10 ) &&
+					date.getDate() === parseInt( jj, 10 ) &&
+					date.getHours() === parseInt( hh, 10 ) &&
+					date.getMinutes() === parseInt( mn, 10 );
+
+				if ( ! valid ) {
+					$wrap.addClass( 'form-invalid' );
+					return;
+				}
+			}
+
+			$wrap.removeClass( 'form-invalid' );
+
+			if ( neverSaved ) {
+				setLabel( cfg.expires_never, cfg.never );
+			} else {
+				var month = cfg.months[ parseInt( mm, 10 ) - 1 ] || mm;
+				setLabel( cfg.expires_on, format( cfg.date_format, [ month, String( parseInt( jj, 10 ) ), aa, pad( hh ), pad( mn ) ] ) );
+			}
+
+			close();
+		} );
+	} );
+}( jQuery ) );

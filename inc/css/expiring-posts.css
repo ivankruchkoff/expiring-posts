@@ -1,35 +1,68 @@
-.curtime #exp-timestamp {
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding: 2px 0 1px 20px;
-}
+/* Expiring Posts: classic editor Publish box. */
 
-#exp-timestampdiv select {
-	height: 20px;
-	line-height: 14px;
-	padding: 0;
+#post-body .misc-pub-expiry #exp-timestamp::before {
+	content: "\f469"; /* dashicons-clock */
+	font: normal 20px/1 dashicons;
+	speak: never;
+	display: inline-block;
+	margin-left: -1px;
+	padding-right: 3px;
 	vertical-align: top;
-}
-
-#exp-timestampdiv input {
-	border-width: 1px;
-	border-style: solid;
+	color: #8c8f94;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #exp-timestampdiv {
 	padding-top: 5px;
-	line-height: 23px;
+	line-height: 1.76923076;
+	border: 0;
+	margin: 0;
 }
 
-#exp-jj, #exp-hh, #exp-mn {
+#exp-timestampdiv p {
+	margin: 8px 0 6px;
+}
+
+#exp-timestampdiv select {
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 2.33333333;
+}
+
+#exp-timestampdiv input[type="text"] {
+	text-align: center;
+}
+
+#exp-jj,
+#exp-hh,
+#exp-mn {
 	width: 2em;
+	padding: 1px;
+	font-size: 12px;
 }
 
 #exp-aa {
 	width: 3.4em;
-}
-
-#exp-aa, #exp-jj, #exp-hh, #exp-mn {
 	padding: 1px;
 	font-size: 12px;
+}
+
+.exp-timestamp-wrap {
+	display: inline-block;
+}
+
+.exp-timestamp-wrap.exp-disabled {
+	opacity: 0.5;
+}
+
+.exp-timestamp-wrap.form-invalid input,
+.exp-timestamp-wrap.form-invalid select {
+	border-color: #d63638;
+	box-shadow: 0 0 2px rgba(214, 54, 56, 0.8);
+}
+
+.exp-cancel-timestamp {
+	margin-left: 6px;
+	line-height: 2.30769231;
 }

@@ -1,0 +1,10 @@
+/.wordpress-org
+/.git
+/.github
+/node_modules
+/vendor
+.distignore
+.gitattributes
+.gitignore
+phpcs.xml.dist
+README.md

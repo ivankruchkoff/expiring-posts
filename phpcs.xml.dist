@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<ruleset name="Expiring Posts">
+	<description>Coding standards for Expiring Posts.</description>
+
+	<file>.</file>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/.wordpress-org/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.6"/>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="expiring-posts"/>
+			</property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="expiring_posts"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- 1.x public API uses the short "exp_" prefix; those names are kept for
+	     back-compat. All hooks keep the "exp_" prefix for consistency with them. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound">
+		<exclude-pattern>includes/class-exp-expiring-posts\.php</exclude-pattern>
+	</rule>
+
+	<rule ref="PHPCompatibilityWP"/>
+</ruleset>
